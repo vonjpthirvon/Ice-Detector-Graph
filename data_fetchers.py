@@ -55,7 +55,7 @@ def calculate_icing(df: pd.DataFrame) -> pd.DataFrame:
     df['NFC_filtered'] = np.where(
         # Ehto: Onko 10 minuutin mean (mukaan lukien nykyinen arvo) <= 0.23dHZ? Vesisadekohinan raja-arvo joka visuaalisesti 
         # määritetty datasta Mikkeli 29.9.2025 verrattuna Vantaan sadepäivän dataan 31.10.2025
-        df['NFC_mean_10min'] < 0.23, 
+        df['NFC_mean_10min'] < 0.17, 
         
         0, # Arvo, jos ehto TOTEUTUU (nollataan) eli tulkitaan data vain kohinaksi.
         

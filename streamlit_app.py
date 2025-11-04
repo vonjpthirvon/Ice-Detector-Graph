@@ -85,8 +85,10 @@ def main():
                     st.warning("No data found for selected time range.")
                     return
                 else:
-                    print(f"Data retrieval succesfull...")
-                    print(f"Start: {df.index[0]},End: {df.index[-1]}, Location: {place}")
+                    # print(f"Data retrieval succesfull...")
+                    # print(f"Start: {df.index[0]},End: {df.index[-1]}, Location: {place}")
+                    st.info(f"Data retrieval succesfull...")
+                    st.info(f"Start: {df.index[0]},End: {df.index[-1]}, Location: {place}")
 
                 st.session_state.df = df  # tallennetaan istuntotilaan
             # print(f"{df[0]},{df[-1]},{place},{starttime},{endtime}")

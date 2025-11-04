@@ -83,7 +83,7 @@ def plot_icegraph(
             ax.xaxis.set_major_locator(mdates.HourLocator(byhour=range(0, 24, 3)))
             ax.xaxis.set_major_formatter(mdates.DateFormatter('%H:%M'))
 
-            # Väli-merkinnät (minor ticks) joka tunti
+            # Väli-merkinnät (minor ticks) joka tunti tai muuten erilainen
             ax.xaxis.set_minor_locator(mdates.HourLocator(interval=1))
         elif duration <= timedelta(days=8):
             ax.xaxis.set_major_locator(mdates.HourLocator(byhour=range(0, 24, 6)))
