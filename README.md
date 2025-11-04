@@ -25,3 +25,4 @@
 Varmista, että sinulla on tarvittavat riippuvuudet asennettuna:
 
 ```bash
+streamlit run streamlit_app.py
