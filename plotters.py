@@ -108,7 +108,7 @@ def plot_icegraph(
         ax.grid(which='minor', linestyle='--', linewidth=0.5, color='lightgray') # kevyet viivat
         ax.legend()
 
-    plt.xlabel("Kellonaika")
+    # plt.xlabel("Kellonaika")
     if sensor_id is not None:
         plt.suptitle(f"{place}#{sensor_id}: {fmisid}: {starttime}-{endtime} UTC")
     else:
