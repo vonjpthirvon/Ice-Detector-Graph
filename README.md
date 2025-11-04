@@ -25,4 +25,5 @@
 Varmista, että sinulla on tarvittavat riippuvuudet asennettuna:
 
 ```bash
+pip install -r requirements.txt
 streamlit run streamlit_app.py
