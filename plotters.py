@@ -7,7 +7,6 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 from io import StringIO
 import chardet
-import altair as alt
 from datetime import datetime, time
 import plotly.express as px
 import plotly.graph_objects as go

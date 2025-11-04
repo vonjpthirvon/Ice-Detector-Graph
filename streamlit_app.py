@@ -7,7 +7,6 @@ import matplotlib.pyplot as plt
 import matplotlib.dates as mdates
 from io import StringIO
 import chardet
-import altair as alt
 from datetime import datetime, time, timedelta, date
 from dateutil.relativedelta import relativedelta
 from data_fetchers import fetch_icedata
