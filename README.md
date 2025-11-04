@@ -1,6 +1,6 @@
 # Ice-Detector-Graph
 
-**Ice-Detector-Graph** on Streamlit-pohjainen sovellus, joka visualisoi jään kertymistä ja siihen liittyviä sääparametreja eri paikkakunnilla Suomessa. Sovellus hyödyntää FMI:n avointa rajapintaa ja tarjoaa interaktiivisia kuvaajia jään muodostumisen analysointiin.
+**Ice-Detector-Graph** on Streamlit-pohjainen sovellus, joka visualisoi jään kertymistä ja siihen muita jäätämisanturin suureita eri paikkakunnilla Suomessa. Sovellus hyödyntää FMI:n avointa rajapintaa ja tarjoaa interaktiivisia kuvaajia jään muodostumisen analysointiin.
 
 ## 🔧 Ominaisuudet
 
