@@ -75,7 +75,7 @@ def main():
     if st.button("Show Graph"):
         try:
             with st.spinner("Fetching data..."):
-                if place in ["Vantaa"] or place in ["Vehmasmäki"]:
+                if place in ["Vantaa"]:
                     # df = fetch_icedata_vantaa(place, starttime, endtime)
                     df = fetch_icedata(FMISID, starttime, endtime, place, sensor_id)
                 else:
@@ -85,19 +85,22 @@ def main():
                     st.warning("No data found for selected time range.")
                     return
                 else:
-                    print(f"Data retrieval succesfull...")
-                    print(f"Start: {df.index[0]},End: {df.index[-1]}, Location: {place}")
+                    # print(f"Data retrieval succesfull...")
+                    # print(f"Start: {df.index[0]},End: {df.index[-1]}, Location: {place}")
+                    st.info(f"Data retrieval succesfull...")
+                    st.info(f"Start: {df.index[0]},End: {df.index[-1]}, Location: {place}")
 
                 st.session_state.df = df  # tallennetaan istuntotilaan
             # print(f"{df[0]},{df[-1]},{place},{starttime},{endtime}")
 
             with st.spinner("Plotting data..."):
-                if place in ["Vantaa"] or place in ["Vehmasmäki"]:
+                if place in ["Vantaa"]:
                     # print("Vantaa")
-                    plot_icegraph(df, place, FMISID, starttime, endtime, sensor_id)
+                    fig = plot_icegraph(df, place, FMISID, start_datetime, end_datetime, sensor_id)
                 else:
                     # print("Muu paikka")
-                    plot_icegraph(df, place, FMISID, starttime, endtime)
+                    fig = plot_icegraph(df, place, FMISID, start_datetime, end_datetime)
+                st.pyplot(fig)
 
         except Exception as e:
             st.error(f"Error occurred: {e}")
