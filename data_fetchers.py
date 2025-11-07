@@ -63,7 +63,9 @@ def calculate_icing(df: pd.DataFrame) -> pd.DataFrame:
     )
 
     # instant luvuet
-    df[f"mm_orig"] = df[f"NFC_orig"] * 0.00381
+    conversion_constant = 0.0038608 # mm/Hz 0.003846 manuaali, 0.0038608 mm/hz ASOS, 
+    # Rayerson-Ramsey julkaisu 0.0035 mm/hz
+    df[f"mm_orig"] = df[f"NFC_orig"] * conversion_constant
 
     # Calculate the cumulative sum
     df[f"cumul_mm_orig"] = df[f"mm_orig"].cumsum()
