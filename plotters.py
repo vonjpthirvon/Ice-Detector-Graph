@@ -79,7 +79,15 @@ def plot_icegraph(
 
         # Päämerkinnät (major ticks) joka 3. tunti
         # ax.xaxis.set_major_locator(mdates.HourLocator(interval=3))
-        if duration <= timedelta(days=3):
+        if duration <= timedelta(hours=9):
+            # ax.xaxis.set_major_locator(mdates.HourLocator(byhour=range(0, 24, 1)))
+            ax.xaxis.set_major_locator(mdates.MinuteLocator(interval=30))
+            ax.xaxis.set_major_formatter(mdates.DateFormatter('%H:%M'))
+            # Väli-merkinnät (minor ticks) joka tunti tai muuten erilainen
+            # ax.xaxis.set_minor_locator(mdates.HourLocator(interval=1))
+            ax.xaxis.set_minor_locator(mdates.MinuteLocator(interval=15))
+            plt.xlabel("Kellonaika")        
+        elif duration <= timedelta(days=3):
             ax.xaxis.set_major_locator(mdates.HourLocator(byhour=range(0, 24, 3)))
             ax.xaxis.set_major_formatter(mdates.DateFormatter('%H:%M'))
 
