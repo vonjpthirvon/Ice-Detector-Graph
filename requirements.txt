@@ -4,5 +4,8 @@ numpy
 pandas
 plotly
 python_dateutil
-Requests
+requests
 streamlit
+cmocean
+folium
+git+https://github.com/vonjpthirvon/icing_utils.git
