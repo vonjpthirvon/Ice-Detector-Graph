@@ -9,8 +9,10 @@ from io import StringIO
 import chardet
 from datetime import datetime, time, timedelta, date
 from dateutil.relativedelta import relativedelta
-from data_fetchers import fetch_icedata
-from plotters import plot_icegraph, plot_parameter
+# from data_fetchers import fetch_icedata
+# from plotters import plot_icegraph, plot_parameter
+from icing_utils.data_fetchers import fetch_icedata
+from icing_utils.plotters import plot_icegraph, plot_parameter
 
 ## PÄÄOHJELMA ALKAA ###
 # Käyttöliittymä
@@ -105,17 +107,17 @@ def main():
         except Exception as e:
             st.error(f"Error occurred: {e}")
 
-    # Interaktiivinen kuvaajien valinta
-    df = st.session_state.get("df", None)
-    if df is not None:
-        st.subheader("Interactive plotting")
-        available_variables = df.select_dtypes(include=[np.number]).columns.tolist()
-        selected_variables = st.multiselect("Valitse muuttujat:", available_variables, default=available_variables[-1])
+    # # Interaktiivinen kuvaajien valinta
+    # df = st.session_state.get("df", None)
+    # if df is not None:
+    #     st.subheader("Interactive plotting")
+    #     available_variables = df.select_dtypes(include=[np.number]).columns.tolist()
+    #     selected_variables = st.multiselect("Valitse muuttujat:", available_variables, default=available_variables[-1])
 
-        for param in selected_variables:
-            fig = plot_parameter(df, param, start_datetime, end_datetime)
-            # st.plotly_chart(fig, use_container_width=True)
-            st.plotly_chart(fig, width='stretch')
+    #     for param in selected_variables:
+    #         fig = plot_parameter(df, param, start_datetime, end_datetime)
+    #         # st.plotly_chart(fig, use_container_width=True)
+    #         st.plotly_chart(fig, width='stretch')
 
 if __name__ == "__main__":
     main()

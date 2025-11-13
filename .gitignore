@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *.pyo
 
+# Omat bak-tiedostot
+*_bak.*
+
 # Streamlitin istuntotila
 *.streamlit/
 
