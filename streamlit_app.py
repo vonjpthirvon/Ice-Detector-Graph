@@ -9,8 +9,10 @@ from io import StringIO
 import chardet
 from datetime import datetime, time, timedelta, date
 from dateutil.relativedelta import relativedelta
-from data_fetchers import fetch_icedata
-from plotters import plot_icegraph, plot_parameter
+# from data_fetchers import fetch_icedata
+# from plotters import plot_icegraph, plot_parameter
+from icing_utils.data_fetchers import fetch_icedata
+from icing_utils.plotters import plot_icegraph, plot_parameter
 
 ## PÄÄOHJELMA ALKAA ###
 # Käyttöliittymä
