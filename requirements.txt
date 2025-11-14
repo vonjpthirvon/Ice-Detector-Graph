@@ -8,4 +8,4 @@ requests
 streamlit
 cmocean
 folium
-git+https://github.com/vonjpthirvon/icing_utils.git
+git+https://github.com/vonjpthirvon/icing_utils.git@1-icing-utils-fzmm-handling
