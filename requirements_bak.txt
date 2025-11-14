@@ -1,8 +1,0 @@
-chardet
-matplotlib
-numpy
-pandas
-plotly
-python_dateutil
-Requests
-streamlit
